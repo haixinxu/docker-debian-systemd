@@ -1,0 +1,6 @@
+deb http://mirrors.163.com/debian/ bullseye main contrib
+deb-src http://mirrors.163.com/debian/ bullseye main contrib
+
+deb http://mirrors.163.com/debian-security bullseye-security main contrib
+deb-src http://mirrors.163.com/debian-security bullseye-security main contrib
+

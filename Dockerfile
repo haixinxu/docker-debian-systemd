@@ -50,6 +50,9 @@ RUN echo 'debconf debconf/frontend select teletype' | debconf-set-selections
 #
 # NOTE: No syslog daemon will be installed, as systemd's journald should fit
 #       most needs. Please file an issue if you think this should be changed.
+# Switch to Chinese mirror
+# COPY sources.list /etc/apt/sources.list
+
 RUN apt-get update
 RUN apt-get dist-upgrade -y
 RUN apt-get install -y --no-install-recommends \
@@ -66,6 +69,9 @@ RUN rm -rf                        \
     /var/log/apt/term.log         \
     /var/log/dpkg.log
 
+
+# Delete root password
+RUN passwd --delete root
 
 # Configure systemd.
 #
