@@ -15,17 +15,13 @@ In addition to systemd cron and anacron will be installed. However, in contrast
 to the official Debian CD, rsyslog will *NOT* be installed, as journald should
 fit most needs.
 
-The image is provided as multi arch image. At the moment the `i386`, `amd64`,
-`arm` and `arm64` architectures are enabled.
-
-
 ## Usage
 
 For Debian stretch run:
 ```
 docker run -d -it                       \
     -v /sys/fs/cgroup:/sys/fs/cgroup:ro \
-    alehaa/debian-systemd:stretch
+    jerryxhx/debian-systemd:stretch
 ```
 
 #### Run at Docker for Mac
