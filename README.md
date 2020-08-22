@@ -17,11 +17,18 @@ fit most needs.
 
 ## Usage
 
-For Debian stretch run:
+For Debian stable run:
 ```
 docker run -d -it                       \
     -v /sys/fs/cgroup:/sys/fs/cgroup:ro \
-    jerryxhx/debian-systemd:stretch
+    jerryxhx/debian-systemd:stable
+```
+
+For Debian testing run:
+```
+docker run -d -it                       \
+    -v /sys/fs/cgroup:/sys/fs/cgroup:ro \
+    jerryxhx/debian-systemd:testing
 ```
 
 #### Run at Docker for Mac
